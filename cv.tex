@@ -1,0 +1,120 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+%\setmonofont[Scale=0.8]{Monaco}
+%%% modified by Karol Kozioł for ShareLaTeX use
+\setmainfont[
+  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  BoldFont=LinLibertine_RB.otf,
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[%dvipdfm, 
+bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Albert Einstein - vita},
+	pdfauthor={My name},
+	pdfproducer={http://nitens.org/taraborelli/cvtex}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\LARGE Name}\\[1cm]
+ College\\
+Address\\
+City\\
+State\\[.2cm]
+Phone: \texttt{000000}\\
+email: \href{mailto:arsh840@gmail.com}{arsh840@gmail.com}\\
+\textsc{url}: \href{http://www.arshpreetsingh.wordpress.com}{http://www.arshpreetsingh.wordpress.com/}\\ 
+
+%%\hrule
+\section*{Current position}
+\emph{Linux Trainer}, Future tech IT center,Ludhiana
+
+%%\hrule
+\section*{Areas of specialization}
+ Linux             * Administration,Security and Development\\
+ Python            * Application Developer\\
+ CMS and framework * User and Development using CMS\\
+ Latex             * Presentation,Report and Execution\\
+ SageMath          * User\\ 
+ BIM               * Open BIM Explorer and Automation Installation\\
+
+%%\hrule
+\section*{Experience}
+\noindent
+\years {4 years} Linux\\
+\years{4 years} Windows\\
+\years{1 year} Python\\
+\years{2 years} CMS\\
+
+
+%\hrule
+\section*{Education}
+\noindent
+\years{2001-04}\textsc{Btech} XXXXXX \\
+
+%\hrule
+\section*{Contributions Made}
+\textsc{url}: \href{https://github.com/arshpreetsingh/batterysaver/}{https://github.com/arshpreetsingh/batterysaver/}\\
+\textsc{url}: \href{https://github.com/arshpreetsingh/DNS-resolver/}{https://github.com/arshpreetsingh/DNS-resolver/}\\
+\textsc{url}: \href{https://github.com/arshpreetsingh/table-openscad/}{https://github.com/arshpreetsingh/table-openscad/}\\
+\textsc{url}: \href{https://github.com/arshpreetsingh/tuxblocks/}{https://github.com/arshpreetsingh/tuxblocks/}\\
+
+%\fontspec{Times New Roman}
+
+{\XeTeX }\\
+
+
+\end{document}
